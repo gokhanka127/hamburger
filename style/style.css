@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+.order_card_left button, .product_menu_card_order button {
+  background-color: rgb(188, 0, 22);
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+}
+.navbar .background {
+  width: 50%;
+  background-color: rgb(188, 0, 22);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+}
+.navbar_title {
+  font-size: 32px;
+}
+.navbar_title p span:nth-child(1) {
+  color: rgb(188, 0, 22);
+  font-family: "DynaPuff";
+}
+.navbar_title p span:nth-child(2) {
+  color: orange;
+  font-family: "DynaPuff";
+}
+.navbar_title p:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.navbar_menu {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+.navbar_menu a {
+  text-decoration: none;
+}
+.navbar_menu a:nth-child(1) {
+  font-weight: 500;
+  color: rgb(188, 0, 22);
+}
+.navbar_menu a:nth-child(2) {
+  font-weight: 500;
+  color: white;
+}
+.navbar_tel {
+  color: white;
+}
+.navbar_tel i {
+  background-color: white;
+  color: black;
+  padding: 4px;
+  border-radius: 15px 15px 0 15px;
+}
+.navbar_tel i:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.banner {
+  border-bottom: 5px solid black;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.banner .background {
+  width: 50%;
+  background-color: rgb(188, 0, 22);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+}
+.banner_left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+.banner_left button {
+  background-color: rgb(188, 0, 22);
+  color: white;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 10px;
+}
+.banner_left button:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.banner_middle {
+  width: 33%;
+  position: relative;
+}
+.banner_middle span {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background-color: #ffc736;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 3px 6px;
+}
+.banner_middle img {
+  width: 100%;
+  height: auto;
+}
+.banner_middle img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.banner_right {
+  width: 33%;
+  text-align: end;
+}
+.banner_right h2 {
+  color: #ffc736;
+}
+.banner_right p {
+  color: white;
+}
+
+.product {
+  border-bottom: 5px solid black;
+  padding: 20px 50px;
+}
+.product_title {
+  text-align: center;
+}
+.product_title span {
+  font-family: "DynaPuff";
+  font-size: 32px;
+}
+.product_title h1 {
+  color: rgb(188, 0, 22);
+}
+.product_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.product_menu_card {
+  width: 280px;
+  text-align: center;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 2px 2px 5px gray;
+  margin: 15px 0 10px 15px;
+  padding: 10px;
+}
+.product_menu_card:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.product_menu_card img {
+  width: 100%;
+  background-color: rgb(188, 0, 22);
+  border-radius: 40px 40px 0 0;
+}
+.product_menu_card_content {
+  display: flex;
+  justify-content: space-around;
+}
+.product_menu_card_content span {
+  background-color: #ffc736;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 3px 6px;
+}
+.product_menu_card p {
+  margin: 10px 0;
+}
+.product_menu_card_order i {
+  background-color: white;
+  color: black;
+  padding: 4px;
+  border-radius: 15px 15px 0 15px;
+  background-color: black;
+  color: white;
+}
+.product_menu_card_order i:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.product_menu_card_order i:hover:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.order {
+  border-bottom: 5px solid black;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.order_card {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 2px 9px black;
+  overflow-x: hidden;
+  transform: rotate(5deg);
+}
+.order_card_left {
+  background-color: rgb(188, 0, 22);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  width: 65%;
+  padding: 0 0 15px 15px;
+}
+.order_card_left h3 {
+  color: white;
+}
+.order_card_left button {
+  background-color: white;
+  color: rgb(188, 0, 22);
+}
+.order_card_left button:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.order_card_right {
+  width: 35%;
+  background-color: #ffc736;
+}
+.order_card_right img {
+  width: 300px;
+}
+
+.social {
+  width: 100%;
+  padding: 20px 50px;
+  border-bottom: 5px solid black;
+}
+.social_title {
+  text-align: center;
+  color: rgb(188, 0, 22);
+}
+.social_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.social_card .social_cards:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.footer {
+  gap: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer li {
+  list-style-type: none;
+}
+.footer li:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.footer_title {
+  font-size: 32px;
+  padding: 15px;
+}
+.footer_title p span:nth-child(1) {
+  color: rgb(188, 0, 22);
+  font-family: "DynaPuff";
+}
+.footer_title p span:nth-child(2) {
+  color: orange;
+  font-family: "DynaPuff";
+}
+.footer_title p:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.footer_title ul {
+  display: flex;
+  gap: 10px;
+}
+.footer_title ul li i {
+  font-size: 24px;
+}
+.footer_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.footer_menu ul {
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+}
+.footer_menu ul li:nth-child(1) {
+  font-weight: 700;
+}
+.footer_menu ul li:nth-child(1):hover {
+  color: rgb(188, 0, 22);
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

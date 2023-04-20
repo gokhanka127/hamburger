@@ -1,0 +1,348 @@
+@import 'variables';
+@import 'modules';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $normal-font;
+}
+
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: relative;
+
+    .background {
+        width: 50%;
+        background-color: $theme-color;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -2;
+    }
+
+    &_title {
+
+        font-size: 32px;
+
+        p {
+            span:nth-child(1) {
+                color: $theme-color;
+                font-family: $title-font;
+            }
+
+            span:nth-child(2) {
+                color: orange;
+                font-family: $title-font;
+            }
+            @include hover;
+        }
+    }
+
+    &_menu {
+
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25px;
+
+        a {
+            &:nth-child(1) {
+                font-weight: 500;
+                color: $theme-color;
+            }
+
+            &:nth-child(2) {
+                font-weight: 500;
+                color: white;
+            }
+
+            text-decoration: none;
+        }
+    }
+
+    &_tel {
+
+        color: white;
+
+        i {
+            background-color: white;
+            color: black;
+            padding: 4px;
+            border-radius: 15px 15px 0 15px;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all .3s;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.banner {
+    border-bottom: 5px solid black;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include back;
+
+    &_left {
+
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+
+        button {
+            background-color: $theme-color;
+            color: white;
+            padding: 4px 8px;
+            border: none;
+            border-radius: 10px;
+            @include hover;
+        }
+    }
+
+    &_middle {
+
+        width: 33%;
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            background-color: $theme2-color;
+            border-radius: 20px;
+            font-weight: 600;
+            padding: 3px 6px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            @include hover
+        }
+    }
+
+    &_right {
+        // border: 3px solid yellow;
+        width: 33%;
+        text-align: end;
+
+        h2 {
+            color: $theme2-color;
+        }
+
+        p {
+            color: white;
+        }
+    }
+}
+
+.product {
+    border-bottom: 5px solid black;
+    padding: 20px 50px;
+
+    &_title {
+        text-align: center;
+
+        span {
+            font-family: $title-font;
+            font-size: 32px;
+        }
+
+        h1 {
+            color: $theme-color;
+        }
+    }
+
+    &_menu {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 25px;
+
+        &_card {
+
+            width: 280px;
+            text-align: center;
+            border-radius: 40px 40px 0 0;
+            box-shadow: 2px 2px 5px gray;
+            margin: 15px 0 10px 15px;
+            padding: 10px;
+            @include hover;
+
+            img {
+                width: 100%;
+                background-color: $theme-color;
+                border-radius: 40px 40px 0 0;
+            }
+
+            &_content {
+                display: flex;
+                justify-content: space-around;
+
+                span {
+                    @include price
+                }
+            }
+
+            p {
+                margin: 10px 0;
+            }
+
+            &_order {
+                i {
+                    @include icon;
+                    background-color: black;
+                    color: white;
+                }
+
+                button {
+                    @extend %button;
+                }
+            }
+        }
+    }
+}
+
+.order {
+    border-bottom: 5px solid black;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &_card {
+        
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 2px 2px 9px black;
+        overflow-x: hidden;
+        transform: rotate(5deg);
+
+        &_left {
+            background-color: $theme-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: start;
+            width: 65%;
+            padding: 0 0 15px 15px;
+
+            h3{
+                color: white;
+            }
+            button{
+                @extend %button;
+                background-color: white;
+                color: $theme-color;
+                @include hover;
+            }
+        }
+
+        &_right {
+            
+            width: 35%;
+            background-color: $theme2-color;
+            img {
+                width: 300px;
+            }
+        }
+    }
+}
+
+.social{
+    width: 100%;
+    padding: 20px 50px;
+    border-bottom: 5px solid black;
+    &_title{
+        text-align: center;
+        color: $theme-color;
+    }
+
+    &_card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        
+        .social_cards{
+            @include hover;
+        }
+    }
+}
+
+.footer{
+
+    gap: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        list-style-type: none;
+        @include hover;
+    }
+
+    &_title{
+        
+        @include logo;
+        padding: 15px;
+        
+        p{
+            @include hover;
+        }
+
+        ul{
+            display: flex;
+            gap: 10px;
+            li{
+                i{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    &_menu{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        ul{
+            display: flex;
+            width: 150px;
+            flex-direction: column;
+            li{
+                &:nth-child(1){
+                   font-weight: 700; 
+                   &:hover{
+                    color: $theme-color;
+                    cursor: pointer;
+                   }
+                }
+            }
+        }
+    }
+
+}

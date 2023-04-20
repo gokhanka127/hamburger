@@ -1,0 +1,73 @@
+// 2 yöntem var; mixin veya %
+// mixin yapısı include ile eklenir
+// % yapısı ise extend ile eklenir
+
+// tek satırlıklarda ise $ ile eklenir. Bakınız variables.scss
+
+@mixin logo {
+    font-size: 32px;
+
+        p {
+            span:nth-child(1) {
+                color: $theme-color;
+                font-family: $title-font;
+            }
+
+            span:nth-child(2) {
+                color: orange;
+                font-family: $title-font;
+            }
+        }
+}
+
+@mixin price {
+    background-color: $theme2-color;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 3px 6px;
+}
+
+%button {
+    background-color: $theme-color;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+@mixin back {
+    position: relative;
+
+    .background {
+        width: 50%;
+        background-color: $theme-color;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -2;
+    }
+}
+
+@mixin icon {
+    background-color: white;
+    color: black;
+    padding: 4px;
+    border-radius: 15px 15px 0 15px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all .3s;
+        cursor: pointer;
+        @include hover
+    }
+}
+
+@mixin hover{
+    &:hover {
+        transform: scale(1.1);
+        transition: all .3s;
+        cursor: pointer;
+    }
+}
